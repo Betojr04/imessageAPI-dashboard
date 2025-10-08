@@ -29,6 +29,32 @@ body {
   overflow-y: auto;
 }
 
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .chat-container {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 80px);
+  }
+
+  .chat-list {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+}
+
 .chat-item {
   padding: 12px;
   margin: 8px 0;

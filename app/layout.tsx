@@ -2,8 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'iMessage AI Dashboard',
-  description: 'Manage your AI-powered iMessage assistant',
+  title: 'SMS AI Assistant - Business Dashboard',
+  description: 'AI-powered SMS assistant for small businesses. Automate customer service via text message.',
 }
 
 export default function RootLayout({
