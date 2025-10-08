@@ -9,28 +9,30 @@ export default function LandingPage() {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       {/* Header */}
       <header style={{
-        padding: '20px 40px',
+        padding: '16px 20px',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         background: 'white',
-        borderBottom: '1px solid #e0e0e0'
+        borderBottom: '1px solid #e0e0e0',
+        flexWrap: 'wrap',
+        gap: '12px'
       }}>
-        <div style={{ fontSize: '24px', fontWeight: '700' }}>
-          AI Assistant
+        <div style={{ fontSize: '20px', fontWeight: '700' }}>
+          📱 SMS AI Assistant
         </div>
-        <div style={{ display: 'flex', gap: '16px' }}>
+        <div style={{ display: 'flex', gap: '12px' }}>
           <button
             onClick={() => router.push('/login')}
             style={{
-              padding: '10px 24px',
+              padding: '8px 16px',
               background: 'transparent',
               border: '1px solid #007aff',
               color: '#007aff',
               borderRadius: '8px',
               cursor: 'pointer',
               fontWeight: '600',
-              fontSize: '15px'
+              fontSize: '14px'
             }}
           >
             Log In
@@ -38,14 +40,14 @@ export default function LandingPage() {
           <button
             onClick={() => router.push('/signup')}
             style={{
-              padding: '10px 24px',
+              padding: '8px 16px',
               background: '#007aff',
               border: 'none',
               color: 'white',
               borderRadius: '8px',
               cursor: 'pointer',
               fontWeight: '600',
-              fontSize: '15px'
+              fontSize: '14px'
             }}
           >
             Get Started
@@ -59,33 +61,35 @@ export default function LandingPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '40px',
+        padding: '20px',
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
       }}>
         <div style={{
           maxWidth: '1200px',
+          width: '100%',
           display: 'flex',
-          gap: '60px',
+          flexDirection: 'column',
+          gap: '40px',
           alignItems: 'center'
         }}>
-          {/* Left: Text */}
-          <div style={{ flex: 1, color: 'white' }}>
+          {/* Text */}
+          <div style={{ flex: 1, color: 'white', textAlign: 'center', maxWidth: '800px' }}>
             <h1 style={{
-              fontSize: '56px',
+              fontSize: 'clamp(32px, 6vw, 56px)',
               fontWeight: '800',
-              marginBottom: '24px',
+              marginBottom: '20px',
               lineHeight: 1.1
             }}>
-              Your AI Assistant,<br />In Your Pocket
+              AI-Powered SMS Assistant<br />For Your Business
             </h1>
             <p style={{
-              fontSize: '20px',
+              fontSize: 'clamp(16px, 3vw, 20px)',
               marginBottom: '32px',
               opacity: 0.95,
               lineHeight: 1.6
             }}>
-              Text your AI assistant and get instant help with anything.
-              Schedule meetings, answer questions, research topics - all through SMS.
+              Automate customer service via SMS. Let AI handle reservations,
+              FAQs, and customer inquiries 24/7 - perfect for bars, restaurants, and retail.
             </p>
             <button
               onClick={() => router.push('/signup')}
@@ -97,8 +101,10 @@ export default function LandingPage() {
                 borderRadius: '12px',
                 cursor: 'pointer',
                 fontWeight: '700',
-                fontSize: '18px',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+                fontSize: '16px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                width: '100%',
+                maxWidth: '300px'
               }}
             >
               Start Free Trial
@@ -112,35 +118,37 @@ export default function LandingPage() {
             </p>
           </div>
 
-          {/* Right: Demo Chat */}
+          {/* Demo Chat */}
           <div style={{
-            flex: 1,
+            width: '100%',
+            maxWidth: '400px',
             background: 'white',
             borderRadius: '16px',
-            padding: '24px',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
-            maxWidth: '400px'
+            padding: '20px',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
           }}>
             <div style={{
-              fontSize: '18px',
+              fontSize: '16px',
               fontWeight: '600',
-              marginBottom: '20px',
-              color: '#333'
+              marginBottom: '16px',
+              color: '#333',
+              textAlign: 'center'
             }}>
-              Live Demo
+              💬 Live Demo - Customer Texts Your Business
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {/* User message */}
+              {/* Customer message */}
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <div style={{
                   background: '#007aff',
                   color: 'white',
                   padding: '12px 16px',
                   borderRadius: '18px',
-                  maxWidth: '80%'
+                  maxWidth: '80%',
+                  fontSize: '14px'
                 }}>
-                  What's the weather tomorrow?
+                  Do you have happy hour today?
                 </div>
               </div>
 
@@ -151,22 +159,24 @@ export default function LandingPage() {
                   color: '#333',
                   padding: '12px 16px',
                   borderRadius: '18px',
-                  maxWidth: '80%'
+                  maxWidth: '80%',
+                  fontSize: '14px'
                 }}>
-                  Tomorrow in San Francisco: Sunny, High 72°F (22°C). Perfect day for outdoor activities!
+                  Yes! Happy hour is 4-7pm today. $5 craft beers & $7 cocktails. See you soon! 🍻
                 </div>
               </div>
 
-              {/* User message */}
+              {/* Customer message */}
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <div style={{
                   background: '#007aff',
                   color: 'white',
                   padding: '12px 16px',
                   borderRadius: '18px',
-                  maxWidth: '80%'
+                  maxWidth: '80%',
+                  fontSize: '14px'
                 }}>
-                  Schedule lunch meeting
+                  Can I reserve a table for 4 at 7pm?
                 </div>
               </div>
 
@@ -177,23 +187,24 @@ export default function LandingPage() {
                   color: '#333',
                   padding: '12px 16px',
                   borderRadius: '18px',
-                  maxWidth: '80%'
+                  maxWidth: '80%',
+                  fontSize: '14px'
                 }}>
-                  ✅ Added "Lunch Meeting" to your calendar tomorrow at 12:30 PM
+                  ✅ Reserved! Table for 4 at 7pm tonight. We'll text you 30 min before. Looking forward to hosting you!
                 </div>
               </div>
             </div>
 
             <div style={{
-              marginTop: '24px',
-              padding: '16px',
+              marginTop: '20px',
+              padding: '12px',
               background: '#f5f5f5',
               borderRadius: '12px',
-              fontSize: '14px',
+              fontSize: '12px',
               color: '#666',
               textAlign: 'center'
             }}>
-              💬 Text from any device • 🤖 Powered by AI • 🔒 Private & Secure
+              🤖 Powered by AI • ⚡ Instant Replies • 📱 Works via SMS
             </div>
           </div>
         </div>
@@ -201,52 +212,140 @@ export default function LandingPage() {
 
       {/* Features Section */}
       <section style={{
-        padding: '80px 40px',
+        padding: '60px 20px',
         background: 'white'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{
-            fontSize: '36px',
+            fontSize: 'clamp(28px, 5vw, 36px)',
             fontWeight: '700',
             textAlign: 'center',
-            marginBottom: '60px'
+            marginBottom: '40px'
           }}>
-            Why Choose Our AI Assistant?
+            Perfect for Small Businesses
           </h2>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '40px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '30px'
           }}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>⚡</div>
-              <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '12px' }}>
-                Instant Responses
+            <div style={{ textAlign: 'center', padding: '20px' }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🍽️</div>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>
+                Restaurants & Bars
               </h3>
-              <p style={{ color: '#666', lineHeight: 1.6 }}>
-                Get answers in seconds. No app downloads, no waiting - just text and get results.
+              <p style={{ color: '#666', lineHeight: 1.6, fontSize: '14px' }}>
+                Handle reservations, answer menu questions, share daily specials - all automatically.
               </p>
             </div>
 
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🧠</div>
-              <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '12px' }}>
-                Smart & Learning
+            <div style={{ textAlign: 'center', padding: '20px' }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🏪</div>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>
+                Retail Stores
               </h3>
-              <p style={{ color: '#666', lineHeight: 1.6 }}>
-                Powered by advanced AI that understands context and learns your preferences.
+              <p style={{ color: '#666', lineHeight: 1.6, fontSize: '14px' }}>
+                Check inventory, share hours, answer product questions - 24/7 customer service.
               </p>
             </div>
 
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🔐</div>
-              <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '12px' }}>
-                Private & Secure
+            <div style={{ textAlign: 'center', padding: '20px' }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>💼</div>
+              <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '12px' }}>
+                Service Businesses
               </h3>
-              <p style={{ color: '#666', lineHeight: 1.6 }}>
-                Your conversations are encrypted and never shared. Your data stays yours.
+              <p style={{ color: '#666', lineHeight: 1.6, fontSize: '14px' }}>
+                Schedule appointments, send reminders, answer common questions automatically.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section style={{
+        padding: '60px 20px',
+        background: '#f8f9fa'
+      }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: 'clamp(28px, 5vw, 36px)',
+            fontWeight: '700',
+            textAlign: 'center',
+            marginBottom: '40px'
+          }}>
+            How It Works
+          </h2>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+              <div style={{
+                background: '#667eea',
+                color: 'white',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700',
+                flexShrink: 0
+              }}>1</div>
+              <div style={{ flex: 1 }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
+                  Get Your Business Number
+                </h3>
+                <p style={{ color: '#666', lineHeight: 1.6 }}>
+                  We provide a dedicated SMS number for your business (via Twilio).
+                </p>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+              <div style={{
+                background: '#667eea',
+                color: 'white',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700',
+                flexShrink: 0
+              }}>2</div>
+              <div style={{ flex: 1 }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
+                  Customize Your AI
+                </h3>
+                <p style={{ color: '#666', lineHeight: 1.6 }}>
+                  Train the AI with your menu, hours, policies, and common questions.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+              <div style={{
+                background: '#667eea',
+                color: 'white',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700',
+                flexShrink: 0
+              }}>3</div>
+              <div style={{ flex: 1 }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
+                  Customers Text You
+                </h3>
+                <p style={{ color: '#666', lineHeight: 1.6 }}>
+                  AI responds instantly 24/7. Monitor all conversations from your dashboard.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -254,24 +353,26 @@ export default function LandingPage() {
 
       {/* CTA Section */}
       <section style={{
-        padding: '80px 40px',
+        padding: '60px 20px',
         background: '#667eea',
         color: 'white',
         textAlign: 'center'
       }}>
         <h2 style={{
-          fontSize: '40px',
+          fontSize: 'clamp(28px, 5vw, 40px)',
           fontWeight: '700',
-          marginBottom: '24px'
+          marginBottom: '20px'
         }}>
-          Ready to Get Started?
+          Ready to Automate Your Customer Service?
         </h2>
         <p style={{
-          fontSize: '20px',
+          fontSize: 'clamp(16px, 3vw, 20px)',
           marginBottom: '32px',
-          opacity: 0.95
+          opacity: 0.95,
+          maxWidth: '600px',
+          margin: '0 auto 32px'
         }}>
-          Join thousands using AI assistants to be more productive
+          Join small businesses using SMS AI to save time and delight customers
         </p>
         <button
           onClick={() => router.push('/signup')}
@@ -283,8 +384,10 @@ export default function LandingPage() {
             borderRadius: '12px',
             cursor: 'pointer',
             fontWeight: '700',
-            fontSize: '18px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+            fontSize: '16px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            maxWidth: '300px',
+            width: '100%'
           }}
         >
           Start Your Free Trial
@@ -293,12 +396,14 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer style={{
-        padding: '40px',
+        padding: '30px 20px',
         background: '#1a1a1a',
         color: '#999',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: '14px'
       }}>
-        <p>© 2025 AI Assistant. All rights reserved.</p>
+        <p>© 2025 SMS AI Assistant. All rights reserved.</p>
+        <p style={{ marginTop: '8px', fontSize: '12px' }}>Powered by Twilio & Google Gemini</p>
       </footer>
     </div>
   )
